@@ -1,6 +1,6 @@
 #pragma once
 
-// avr-ethermega2560 *******************************************************************************
+// avr-mega2560 *******************************************************************************
 
 // ANALOG PINS ************************************************************************************
 // A0 used for LCD 16x2 shield for polling / reading all operational buttons via resistor network.
@@ -81,6 +81,6 @@ const int PIN_DIN_LIMIT_SW_DEST_CCW_RED_P3 = 3; // COUNTER_CLOCK_WISE (CCW).
 #define	MYSERIAL3_BEGIN Serial3.begin(BAUD_SERIAL2, SERIAL_8N1); // AVR has 2 params, ESP32 has 4.
 
 
-// avr-ethermega2560 ***********************************************************************************
+// avr-mega2560 ***********************************************************************************
 
 // END_OF_FILE

@@ -3,7 +3,7 @@
 #define INTERRUPT_MODE 					FALLING
 
 // T_EMBED ESP32-S3 *******************************************************************************
-//#define PIN_ENCODE_BTN        0 // NOTE : Assigned in tcmenu designer
+//#define PIN_ENCODE_BTN        0 // NOTE : Assigned in tcmenu designer. ALSO ESP32 BOOT IO00
 //#define PIN_ENCODE_B          1 // NOTE : Assigned in tcmenu designer
 //#define PIN_ENCODE_A          2 // NOTE : Assigned in tcmenu designer
 
@@ -57,8 +57,10 @@ const int PIN_SERVO_AIR_VALVE			= 41; // CN1_P11_IO41_WHITE_BB_E30
 #define PIN_ES7210_MCLK       48
 // T_EMBED ESP32-S3 *******************************************************************************
 
-//#define	MYSERIAL1_BEGIN Serial1.begin(BAUD_SERIAL1, SERIAL_8N1, 16, 17); // ,,RX,TX  DIP-P4, DIP-P5.
-#define	MYSERIAL2_BEGIN Serial2.begin(BAUD_SERIAL1, SERIAL_8N1, PIN_SERIAL1_RX, PIN_SERIAL1_TX); // GROVE-P4, GROVE-P3
+//#define MYSERIAL1_BEGIN Serial1.begin(BAUD_SERIAL1, SERIAL_8N1, PIN_SERIAL1_RX, PIN_SERIAL1_TX); // CNG-P4, CNG-P3
+//#define MYSERIAL2_BEGIN Serial2.begin(BAUD_SERIAL1, SERIAL_8N1, PIN_SERIAL1_RX, PIN_SERIAL1_TX); // CNG-P4, CNG-P3.
+// 2024-10-14 The t-embed serial port on GROVE conn. is NOT currently working w. embedCONTROL. However, Serial is OK.
+
 
 // END_OF_FILE
 
